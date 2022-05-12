@@ -6,14 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="desccription" content="Organize Your Tasks all in One Place" />
     <title>Tasks</title>
-    <script src="scripts/tasks.js"></script>
+    <link rel="stylesheet" href="style/styles.css">
   </head>
   <body>
-    <h1>Tasks</h1>
-    <ul id="tasks"></ul>
-    <form>
-      <input type="text" id="task" />
-      <input id="submit" type="submit" />
-    </form>
+    <header>
+        <h1>Task List</h1>
+        <p>Store all your tasks in one place!</p>
+        <form id="task-form">
+          <label>New Task</label>
+          <input type="text" required id="text" placeholder="Write Your Task Here" >
+          <button id="submit">Add Task</button>
+        </form>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tasks</h2>
+        <div id="tasks_el">
+          <!-- <div class="tasks_container">
+          <div class="contents">
+            <textarea class="input_el" readonly>Hello there</textarea>
+          </div>
+            <div class="actions">
+            <button class="edit_el">Edit</button>
+            <button class="delete_el">Delete</button>
+          </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <script src="scripts/tasks.js"></script>
   </body>
 </html>
