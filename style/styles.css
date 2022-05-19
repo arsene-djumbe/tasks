@@ -44,7 +44,7 @@ header p {
   font-weight: 600;
   margin-bottom: 40px;
 }
-  
+
 #task-form {
   display: flex;
   justify-content: space-between;
@@ -129,6 +129,7 @@ section h2 {
 #tasks_el .tasks_container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .tasks_container .contents .input_el {
@@ -149,6 +150,7 @@ section h2 {
 .tasks_container .contents .input_el:not(:read-only) {
   color: rgb(146, 200, 236);
 }
+
 .tasks_container .actions {
   display: flex;
   align-items: center;
@@ -183,4 +185,92 @@ section h2 {
   color: rgb(85, 219, 243);
 }
 
+  @media (min-width: 300px) and (max-width: 500px) {
+  
+    header {
+      padding: 20px 15px;
+    }
+    header h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+  
+    header p {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  
+    #task-form {
+      margin-left: 0;
+    }
+  
+    #task-form label {
+      font-size: 15px;
+      margin-right: 20px;
+    }
+    
+    #task-form #text {
+      width: 100px;
+      height: 35px;
+      padding-left: 10px;
+    }
+  
+    #task-form #text::placeholder {
+      font-size: 15px;
+      text-align: center;
+    }
+  
+    #task-form #submit {
+      font-size: 16px;
+      padding-left: 10px;
+    }
+  
+    section {
+      margin: 0;
+    }
+  
+    section h2 {
+      margin-top: -10px;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    #tasks_el {
+      margin-left: -15px;
+    }
+    
+    #tasks_el .tasks_container {
+      display: flex;
+      margin-right: 20px;
+      
+      
+    }
+    .tasks_container .contents .input_el {
+      min-width: 170px;
+      max-width: 250px;
+      min-height: 70px;
+      max-height: 300px;
+      margin-left: 50px;
+    }
 
+    .tasks_container .actions {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      margin-top: -15px;
+      
+      
+    }
+
+    .tasks_container .actions button {
+      border: 1px solid var(--grey);
+      border-radius: 3px;
+      
+    }
+
+    .actions .edit_el {
+      margin-bottom: 5px;
+    }
+  
+  }
